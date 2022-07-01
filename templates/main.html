@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placement Predictor</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Website Title -->
+
+  <div class="container">
+    <h2 class='container-heading'><span class="heading_font">Placement Prediction</span></h2>
+    <div class='description'>
+      <p>A Machine Learning Web Application that predicits chances of student getting placed or not, Built with Flask and Deployed using Heroku.</p><br>
+        <p>(Note:This Application is 85% accurate)</p>
+    </div>
+  </div>
+
+  <!-- Text Area -->
+  <div class="ml-container">
+    <form action="{{ url_for('predict')}}" method="POST"> 
+
+      
+
+
+
+        <label for="gen">Gender</label>
+        <select id="gen" name="gen">
+          <option selected>----select option----</option>
+          <option value="1">M</option>
+          <option value="0">F</option>
+        </select><br>
+		
+		
+		<label for="ssc_p">SSC Percentage</label>
+        <input type="text" id="ssc_p" name="ssc_p" placeholder="A number in range [0-100] %"><br>
+		
+	
+
+        <label for="cp">SSC Board</label>
+        <select id="cp" name="cp">
+          <option selected>----select option----</option>
+          <option value="1">Others</option>
+          <option value="2">Central</option>
+        </select><br>
+
+
+        <label for="Hsc_p">HSC Percentage</label>
+        <input type="text" id="Hsc_p" name="Hsc_p" placeholder="A number in range [0-100] %"><br>
+		
+		
+		<label for="hp">HSC Board</label>
+        <select id="hp" name="hp">
+          <option selected>----select option----</option>
+          <option value="1">Others</option>
+          <option value="2">Central</option>
+        </select><br>
+		
+		
+		<label for="sp">HSC Subject</label>
+        <select id="sp" name="sp">
+          <option selected>----select option----</option>
+          <option value="1">Commerce</option>
+		  <option value="2">Science</option>
+		  <option value="3">Arts</option>
+        </select><br>
+		
+		
+		<label for="d_p">Degree Percentage</label>
+        <input type="text" id="d_p" name="d_p" placeholder="A number in range [0-100] %"><br>
+		
+		
+       
+		
+		 <label for="pa">Degree Department</label>
+        <select id="pa" name="pa">
+          <option selected>----select option----</option>
+          <option value="1">commerce_marketing </option>
+          <option value="2">others </option>
+		  <option value="3">science_tech </option>
+        </select><br>
+
+
+
+        <label for="wx">Work Experience</label>
+        <select id="wx" name="wx">
+          <option selected>----select option----</option>
+          <option value="1">YES</option>
+          <option value="0">NO</option>
+        </select><br>
+
+
+
+
+        <label for="tha">Employability test percentage  </label>
+        <input type="text" id="tha" name="tha" placeholder="A number in range [0-100]%"><br>
+
+
+        <label for="spec">Specialisation</label>
+        <select id="spec" name="spec">
+          <option selected>----select option----</option>
+          <option value="1">Mkt and hr </option>
+          <option value="2">Mkt and Fin </option>
+        </select><br>
+
+
+        <label for="m_P">MBA_Percentage</label>
+        <input type="text" id="m_P" name="m_P" placeholder="Type in  range [0-100]%"><br>
+
+
+
+       
+
+      <input type="submit" class="my-cta-button" value="Predict">
+    </form>
+  </div>
+
+  <!-- Footer -->
+ <div class='footer'>
+    <div class="contact">
+      <a target="_blank" href="https://github.com"><i
+          class="fab fa-github fa-lg contact-icon"></i></a>
+      <a target="_blank" href="https://www.linkedin.com"><i
+          class="fab fa-linkedin fa-lg contact-icon"></i></a>
+    </div>
+    <p class='footer-description'>Made by Saravana.</p>
+  </div>
+
+</body>
+
+</html>
